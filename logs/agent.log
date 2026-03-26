@@ -1,0 +1,226 @@
+2026-03-26 22:42:04  INFO      [erp.api]  ERP Agent API starting up on port 8000
+2026-03-26 22:42:27  INFO      [erp.agent.service]  Initialising ERP agent executor …
+2026-03-26 22:42:27  INFO      [erp.agent.service]  ERP agent executor ready
+2026-03-26 22:42:27  INFO      [erp.api]  ERP Agent API starting up on port 8000
+2026-03-26 22:42:49  INFO      [erp.agent.service]  Initialising ERP agent executor …
+2026-03-26 22:42:49  INFO      [erp.agent.service]  ERP agent executor ready
+2026-03-26 22:42:49  INFO      [erp.api]  ERP Agent API starting up on port 8000
+2026-03-26 22:43:03  INFO      [erp.agent.service]  Initialising ERP agent executor …
+2026-03-26 22:43:03  INFO      [erp.agent.graph_agent]  Creating ERP ReAct agent | model=gemini-pro | tools=['get_database_schema', 'execute_cypher_query']
+2026-03-26 22:43:03  INFO      [erp.agent.graph_agent]  LLM loaded: ChatGoogleGenerativeAI
+2026-03-26 22:43:03  INFO      [erp.agent.graph_agent]  ERP ReAct agent created successfully
+2026-03-26 22:43:03  INFO      [erp.agent.service]  ERP agent executor ready
+2026-03-26 22:43:03  INFO      [erp.api]  ERP Agent API starting up on port 8000
+2026-03-26 22:43:20  INFO      [erp.test]  wrapper.py import OK
+2026-03-26 22:43:20  DEBUG     [erp.test]  debug also works
+2026-03-26 22:43:49  INFO      [erp.api]  GET /api/graph | nodes=480 edges=472
+2026-03-26 22:43:52  INFO      [erp.api]  POST /api/chat | session=default | query='Which products are associated with the highest number of billing documents?'
+2026-03-26 22:43:52  INFO      [erp.agent.service]  [default] New session started
+2026-03-26 22:43:52  INFO      [erp.agent.service]  [default] Invoking agent | history_msgs=0 | query='Which products are associated with the highest number of billing documents?'
+2026-03-26 22:44:25  ERROR     [erp.agent.service]  [default] Agent invocation failed | 33461 ms | ChatGoogleGenerativeAIError: Error calling model 'gemini-3.1-pro-preview' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro\nPlease retry in 34.083501623s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerDay-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-pro'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '34s'}]}}
+2026-03-26 22:44:25  ERROR     [erp.api]  POST /api/chat FAILED | session=default | 33462 ms | ChatGoogleGenerativeAIError: Error calling model 'gemini-3.1-pro-preview' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro\nPlease retry in 34.083501623s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerDay-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-pro'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-pro'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '34s'}]}}
+2026-03-26 22:45:10  INFO      [erp.agent.service]  Initialising ERP agent executor …
+2026-03-26 22:45:10  INFO      [erp.agent.graph_agent]  Creating ERP ReAct agent | model=gemini-pro | tools=['get_database_schema', 'execute_cypher_query']
+2026-03-26 22:45:10  INFO      [erp.agent.graph_agent]  LLM loaded: ChatGoogleGenerativeAI
+2026-03-26 22:45:10  INFO      [erp.agent.graph_agent]  ERP ReAct agent created successfully
+2026-03-26 22:45:10  INFO      [erp.agent.service]  ERP agent executor ready
+2026-03-26 22:45:10  INFO      [erp.api]  ERP Agent API starting up on port 8000
+2026-03-26 22:45:18  INFO      [erp.api]  POST /api/chat | session=default | query='Which products are associated with the highest number of billing documents?'
+2026-03-26 22:45:18  INFO      [erp.agent.service]  [default] New session started
+2026-03-26 22:45:18  INFO      [erp.agent.service]  [default] Invoking agent | history_msgs=0 | query='Which products are associated with the highest number of billing documents?'
+2026-03-26 22:45:24  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query='MATCH (p:Product)<-[:ORDER_CONTAINS]-(s:SalesOrder)-[:ORDER_INVOICED_BY]->(b:BillingDocument)\nRETURN p.description, count(DISTINCT b.node_id) AS billing_doc_count\nORDER BY billing_doc_count DESC\nLIMIT'
+2026-03-26 22:45:24  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 92 ms | result_len=49
+2026-03-26 22:45:26  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query='MATCH (s:SalesOrder)-[r:ORDER_INVOICED_BY]->(b:BillingDocument)\nRETURN r.material, count(DISTINCT b.node_id) AS billing_doc_count\nORDER BY billing_doc_count DESC\nLIMIT 10'
+2026-03-26 22:45:27  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 53 ms | result_len=49
+2026-03-26 22:45:29  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query='MATCH (p:Product)<-[:DELIVERY_CONTAINS]-(d:Delivery)-[:INVOICED_BY]->(b:BillingDocument)\nRETURN p.description, count(DISTINCT b.node_id) AS billing_doc_count\nORDER BY billing_doc_count DESC\nLIMIT 10'
+2026-03-26 22:45:29  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 51 ms | result_len=804
+2026-03-26 22:45:34  INFO      [erp.agent.service]  [default] Agent finished | 16175 ms | tool_steps=3 | response_len=1
+2026-03-26 22:45:34  INFO      [erp.api]  POST /api/chat OK | session=default | 16175 ms | response_len=1
+2026-03-26 22:45:34  ERROR     [erp.api]  POST /api/chat FAILED | session=default | 16175 ms | ValidationError: 1 validation error for ChatResponse
+response
+  Input should be a valid string [type=string_type, input_value=[{'type': 'text', 'text':...7T9dX8kVVmrgdPpGAnw='}}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2026-03-26 22:46:36  INFO      [erp.agent.service]  Initialising ERP agent executor …
+2026-03-26 22:46:36  INFO      [erp.agent.graph_agent]  Creating ERP ReAct agent | model=gemini-pro | tools=['get_database_schema', 'execute_cypher_query']
+2026-03-26 22:46:36  INFO      [erp.agent.graph_agent]  LLM loaded: ChatGoogleGenerativeAI
+2026-03-26 22:46:36  INFO      [erp.agent.graph_agent]  ERP ReAct agent created successfully
+2026-03-26 22:46:36  INFO      [erp.agent.service]  ERP agent executor ready
+2026-03-26 22:46:36  INFO      [erp.api]  ERP Agent API starting up on port 8000
+2026-03-26 22:48:30  INFO      [erp.agent.graph_agent]  Creating ERP ReAct agent | model=gemini-pro | tools=['get_database_schema', 'execute_cypher_query']
+2026-03-26 22:48:30  INFO      [erp.agent.graph_agent]  LLM loaded: ChatGoogleGenerativeAI
+2026-03-26 22:48:30  INFO      [erp.agent.graph_agent]  ERP ReAct agent created successfully
+2026-03-26 22:49:47  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query='MATCH (c:Customer) RETURN count(c) AS total_customers'
+2026-03-26 22:49:47  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 87 ms | result_len=104
+2026-03-26 22:49:56  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query='MATCH (c:Customer) WHERE c.city = \'Mumbai\' RETURN sum(CAST(c.outstanding_amount, "DOUBLE")) AS total_outstanding_amount'
+2026-03-26 22:49:56  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 51 ms | result_len=125
+2026-03-26 22:50:14  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query="MATCH (c:Customer) WHERE c.city = 'Mumbai' RETURN c.name, c.city, c.outstanding_amount LIMIT 5"
+2026-03-26 22:50:14  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 69 ms | result_len=49
+2026-03-26 22:51:32  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query='MATCH (c:Customer) RETURN DISTINCT c.city LIMIT 20'
+2026-03-26 22:51:32  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 73 ms | result_len=141
+2026-03-26 22:54:03  ERROR     [erp.test.graph_agent]  Agent execution failed
+Traceback (most recent call last):
+  File "/Users/prathameshk/0xWT/ERP/test_graph_agent.py", line 27, in test_query
+    response = agent.invoke({"messages": [HumanMessage(content=query)]})
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3292, in invoke
+    for chunk in self.stream(
+                 ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<10 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ):
+    ^
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2725, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 167, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 96, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 393, in invoke
+    ret = context.run(self.func, *args, **kwargs)
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/langgraph/prebuilt/chat_agent_executor.py", line 679, in call_model
+    response = cast(AIMessage, static_model.invoke(model_input, config))  # type: ignore[union-attr]
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/langchain_core/runnables/base.py", line 3157, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/langchain_core/runnables/base.py", line 5695, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 2535, in invoke
+    return super().invoke(input, config, stop=stop, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 454, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1201, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1010, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1313, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 3047, in _generate
+    response: GenerateContentResponse = self.client.models.generate_content(
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        **request,
+        ^^^^^^^^^^
+    )
+    ^
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/google/genai/models.py", line 5849, in generate_content
+    return self._generate_content(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        model=model, contents=contents, config=parsed_config
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/google/genai/models.py", line 4526, in _generate_content
+    response = self._api_client.request(
+        'post', path, request_dict, http_options
+    )
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/google/genai/_api_client.py", line 1402, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/google/genai/_api_client.py", line 1236, in _request
+    return retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/google/genai/_api_client.py", line 1215, in _request_once
+    errors.APIError.raise_for_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/google/genai/errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prathameshk/0xWT/ERP/venv/lib/python3.13/site-packages/google/genai/errors.py", line 161, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+During task with name 'agent' and id '4824fa79-ca6d-a6fd-a0b6-4f290825dc0b'
+2026-03-26 22:54:39  INFO      [erp.agent.graph_agent]  Creating ERP ReAct agent | model=gemini-pro | tools=['get_database_schema', 'execute_cypher_query']
+2026-03-26 22:54:39  INFO      [erp.agent.graph_agent]  LLM loaded: ChatGoogleGenerativeAI
+2026-03-26 22:54:39  INFO      [erp.agent.graph_agent]  ERP ReAct agent created successfully
+2026-03-26 22:55:18  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query="MATCH (s:SalesOrder {entity_id: '740506'})-[:ORDER_CONTAINS]->(p:Product)\nRETURN p.entity_id, p.description"
+2026-03-26 22:55:18  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 60 ms | result_len=483
+2026-03-26 22:55:50  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query='MATCH (c:Customer) RETURN count(c) AS customer_count'
+2026-03-26 22:55:50  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 72 ms | result_len=102
+2026-03-26 22:56:01  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query='MATCH (c:Customer) WHERE c.city = \'Mumbai\' RETURN sum(CAST(c.outstanding_amount, "DOUBLE")) AS total_outstanding_mumbai'
+2026-03-26 22:56:01  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 45 ms | result_len=125
+2026-03-26 22:56:05  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query="MATCH (so:SalesOrder {entity_id: '740506'})-[:DELIVERED_BY]->(d:Delivery)\nRETURN so.requested_delivery_date, d.actual_goods_movement_date"
+2026-03-26 22:56:05  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 78 ms | result_len=215
+2026-03-26 22:56:22  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query='MATCH (c:Customer) RETURN DISTINCT c.city LIMIT 20'
+2026-03-26 22:56:22  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 56 ms | result_len=141
+2026-03-26 22:56:28  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query="MATCH (so:SalesOrder {entity_id: '740506'})-[:DELIVERED_BY]->(d:Delivery)\nRETURN d.actual_goods_movement_date, d.picking_status, d.goods_movement_status, so.delivery_status"
+2026-03-26 22:56:29  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 39 ms | result_len=276
+2026-03-26 22:56:41  INFO      [erp.agent.tools]  [TOOL] get_database_schema called
+2026-03-26 22:56:41  INFO      [erp.agent.tools]  [TOOL] get_database_schema done | 0 ms | result_len=3232
+2026-03-26 22:56:52  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query="MATCH (so:SalesOrder {entity_id: '740506'})-[:DELIVERED_BY]->(d:Delivery)\nRETURN d.actual_goods_movement_date, so.requested_delivery_date, so.delivery_status"
+2026-03-26 22:56:52  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 57 ms | result_len=262
+2026-03-26 22:56:52  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query='MATCH (c:Customer) RETURN c.city, count(*) AS count LIMIT 50'
+2026-03-26 22:56:52  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 56 ms | result_len=190
+2026-03-26 22:57:00  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query="MATCH (so:SalesOrder {entity_id: '740506'})-[:DELIVERED_BY]->(d:Delivery)\nRETURN d.entity_id, d.actual_goods_movement_date"
+2026-03-26 22:57:00  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 49 ms | result_len=169
+2026-03-26 22:57:33  INFO      [erp.agent.service]  Initialising ERP agent executor …
+2026-03-26 22:57:33  INFO      [erp.agent.graph_agent]  Creating ERP ReAct agent | model=gemini-pro | tools=['get_database_schema', 'execute_cypher_query']
+2026-03-26 22:57:33  INFO      [erp.agent.graph_agent]  LLM loaded: ChatGoogleGenerativeAI
+2026-03-26 22:57:33  INFO      [erp.agent.graph_agent]  ERP ReAct agent created successfully
+2026-03-26 22:57:33  INFO      [erp.agent.service]  ERP agent executor ready
+2026-03-26 22:57:33  INFO      [erp.api]  ERP Agent API starting up on port 8000
+2026-03-26 22:58:25  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query="MATCH (d:Delivery {entity_id: '80737721'}) RETURN d.*"
+2026-03-26 22:58:25  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 76 ms | result_len=603
