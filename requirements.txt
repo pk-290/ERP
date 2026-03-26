@@ -4,7 +4,10 @@ kuzu
 langchain
 langchain-core
 langchain-google-genai
+langgraph
 langfuse
 pydantic
 fastapi
-uvicorn
+uvicorn[standard]
+aiofiles
+python-multipart

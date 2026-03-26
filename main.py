@@ -1,7 +1,9 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import List, Dict, Any
+from pathlib import Path
 import time
 import uvicorn
 import os
@@ -194,7 +196,16 @@ async def get_graph_data():
 
 @app.on_event("startup")
 async def startup_event():
-    logger.info("ERP Agent API starting up on port 8000")
+    logger.info("ERP Agent API starting up on port %s", os.getenv("PORT", "8000"))
+
+    # In production (Docker/Render), serve the pre-built React frontend.
+    # Controlled by the SERVE_FRONTEND env var set in the Dockerfile.
+    frontend_dist = Path(__file__).parent / "frontend" / "dist"
+    if os.getenv("SERVE_FRONTEND") == "true" and frontend_dist.is_dir():
+        app.mount("/", StaticFiles(directory=str(frontend_dist), html=True), name="static")
+        logger.info("Serving frontend from %s", frontend_dist)
+    else:
+        logger.info("Frontend static serving disabled (dev mode or dist not built)")
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=int(os.getenv("PORT", 8000)), reload=True)

@@ -59,6 +59,13 @@ def ask_erp_agent(session_id: str, query: str) -> str:
         final_message = response["messages"][-1]
         output = final_message.content
 
+        # Gemini can return content as a list of blocks instead of a string
+        if isinstance(output, list):
+            output = " ".join(
+                block.get("text", "") if isinstance(block, dict) else str(block)
+                for block in output
+            ).strip()
+
         # Count how many tool-call steps the agent took
         tool_steps = sum(
             1 for m in response["messages"]

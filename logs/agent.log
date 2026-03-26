@@ -224,3 +224,88 @@ During task with name 'agent' and id '4824fa79-ca6d-a6fd-a0b6-4f290825dc0b'
 2026-03-26 22:57:33  INFO      [erp.api]  ERP Agent API starting up on port 8000
 2026-03-26 22:58:25  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query="MATCH (d:Delivery {entity_id: '80737721'}) RETURN d.*"
 2026-03-26 22:58:25  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 76 ms | result_len=603
+2026-03-26 23:04:40  INFO      [erp.agent.service]  Initialising ERP agent executor …
+2026-03-26 23:04:40  INFO      [erp.agent.graph_agent]  Creating ERP ReAct agent | model=gemini-pro | tools=['get_database_schema', 'execute_cypher_query']
+2026-03-26 23:04:40  INFO      [erp.agent.graph_agent]  LLM loaded: ChatGoogleGenerativeAI
+2026-03-26 23:04:40  INFO      [erp.agent.graph_agent]  ERP ReAct agent created successfully
+2026-03-26 23:04:40  INFO      [erp.agent.service]  ERP agent executor ready
+2026-03-26 23:04:40  INFO      [erp.api]  ERP Agent API starting up on port 8000
+2026-03-26 23:04:47  INFO      [erp.agent.service]  Initialising ERP agent executor …
+2026-03-26 23:04:47  INFO      [erp.agent.graph_agent]  Creating ERP ReAct agent | model=gemini-pro | tools=['get_database_schema', 'execute_cypher_query']
+2026-03-26 23:04:47  INFO      [erp.agent.graph_agent]  LLM loaded: ChatGoogleGenerativeAI
+2026-03-26 23:04:47  INFO      [erp.agent.graph_agent]  ERP ReAct agent created successfully
+2026-03-26 23:04:47  INFO      [erp.agent.service]  ERP agent executor ready
+2026-03-26 23:04:47  INFO      [erp.api]  ERP Agent API starting up on port 8000
+2026-03-26 23:04:47  INFO      [erp.api]  Frontend static serving disabled (dev mode or dist not built)
+2026-03-26 23:05:05  INFO      [erp.readme_check]  Checking all imports...
+2026-03-26 23:05:12  INFO      [erp.agent.service]  Initialising ERP agent executor …
+2026-03-26 23:05:12  INFO      [erp.agent.graph_agent]  Creating ERP ReAct agent | model=gemini-pro | tools=['get_database_schema', 'execute_cypher_query']
+2026-03-26 23:05:12  INFO      [erp.agent.graph_agent]  LLM loaded: ChatGoogleGenerativeAI
+2026-03-26 23:05:12  INFO      [erp.agent.graph_agent]  ERP ReAct agent created successfully
+2026-03-26 23:05:12  INFO      [erp.agent.service]  ERP agent executor ready
+2026-03-26 23:05:12  INFO      [erp.check]  All imports OK
+2026-03-26 23:06:39  INFO      [erp.agent.service]  Initialising ERP agent executor …
+2026-03-26 23:06:39  INFO      [erp.agent.graph_agent]  Creating ERP ReAct agent | model=gemini-pro | tools=['get_database_schema', 'execute_cypher_query']
+2026-03-26 23:06:39  INFO      [erp.agent.graph_agent]  LLM loaded: ChatGoogleGenerativeAI
+2026-03-26 23:06:39  INFO      [erp.agent.graph_agent]  ERP ReAct agent created successfully
+2026-03-26 23:06:39  INFO      [erp.agent.service]  ERP agent executor ready
+2026-03-26 23:06:39  INFO      [erp.api]  ERP Agent API starting up on port 8000
+2026-03-26 23:06:39  INFO      [erp.api]  Frontend static serving disabled (dev mode or dist not built)
+2026-03-26 23:10:48  INFO      [erp.agent.graph_agent]  Creating ERP ReAct agent | model=gemini-pro | tools=['get_database_schema', 'execute_cypher_query']
+2026-03-26 23:10:48  INFO      [erp.agent.graph_agent]  LLM loaded: ChatGoogleGenerativeAI
+2026-03-26 23:10:48  INFO      [erp.agent.graph_agent]  ERP ReAct agent created successfully
+2026-03-26 23:10:57  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query='MATCH (c:Customer) RETURN count(c) AS customer_count'
+2026-03-26 23:10:57  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 67 ms | result_len=102
+2026-03-26 23:11:43  INFO      [erp.agent.service]  Initialising ERP agent executor …
+2026-03-26 23:11:43  INFO      [erp.agent.graph_agent]  Creating ERP ReAct agent | model=gemini-pro | tools=['get_database_schema', 'execute_cypher_query']
+2026-03-26 23:11:43  INFO      [erp.agent.graph_agent]  LLM loaded: ChatGoogleGenerativeAI
+2026-03-26 23:11:43  INFO      [erp.agent.graph_agent]  ERP ReAct agent created successfully
+2026-03-26 23:11:43  INFO      [erp.agent.service]  ERP agent executor ready
+2026-03-26 23:11:43  INFO      [erp.api]  ERP Agent API starting up on port 8000
+2026-03-26 23:11:43  INFO      [erp.api]  Frontend static serving disabled (dev mode or dist not built)
+2026-03-26 23:12:34  INFO      [erp.agent.service]  Initialising ERP agent executor …
+2026-03-26 23:12:34  INFO      [erp.agent.graph_agent]  Creating ERP ReAct agent | model=gemini-pro | tools=['get_database_schema', 'execute_cypher_query']
+2026-03-26 23:12:34  INFO      [erp.agent.graph_agent]  LLM loaded: ChatGoogleGenerativeAI
+2026-03-26 23:12:34  INFO      [erp.agent.graph_agent]  ERP ReAct agent created successfully
+2026-03-26 23:12:34  INFO      [erp.agent.service]  ERP agent executor ready
+2026-03-26 23:12:34  INFO      [erp.api]  ERP Agent API starting up on port 8000
+2026-03-26 23:12:34  INFO      [erp.api]  Frontend static serving disabled (dev mode or dist not built)
+2026-03-26 23:13:09  INFO      [erp.api]  GET /api/graph | nodes=480 edges=472
+2026-03-26 23:13:22  INFO      [erp.api]  POST /api/chat | session=build-test | query='How many customers are in the database?'
+2026-03-26 23:13:22  INFO      [erp.agent.service]  [build-test] New session started
+2026-03-26 23:13:22  INFO      [erp.agent.service]  [build-test] Invoking agent | history_msgs=0 | query='How many customers are in the database?'
+2026-03-26 23:13:24  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query='MATCH (c:Customer) RETURN count(c) AS customer_count'
+2026-03-26 23:13:24  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 69 ms | result_len=102
+2026-03-26 23:13:25  INFO      [erp.agent.service]  [build-test] Agent finished | 3517 ms | tool_steps=1 | response_len=1
+2026-03-26 23:13:25  INFO      [erp.api]  POST /api/chat OK | session=build-test | 3517 ms | response_len=1
+2026-03-26 23:13:25  ERROR     [erp.api]  POST /api/chat FAILED | session=build-test | 3517 ms | ValidationError: 1 validation error for ChatResponse
+response
+  Input should be a valid string [type=string_type, input_value=[{'type': 'text', 'text':...6KGfxTpRCu+fD01RxU8='}}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2026-03-26 23:15:15  INFO      [erp.agent.service]  Initialising ERP agent executor …
+2026-03-26 23:15:15  INFO      [erp.agent.graph_agent]  Creating ERP ReAct agent | model=gemini-pro | tools=['get_database_schema', 'execute_cypher_query']
+2026-03-26 23:15:15  INFO      [erp.agent.graph_agent]  LLM loaded: ChatGoogleGenerativeAI
+2026-03-26 23:15:15  INFO      [erp.agent.graph_agent]  ERP ReAct agent created successfully
+2026-03-26 23:15:15  INFO      [erp.agent.service]  ERP agent executor ready
+2026-03-26 23:15:15  INFO      [erp.api]  ERP Agent API starting up on port 8000
+2026-03-26 23:15:15  INFO      [erp.api]  Frontend static serving disabled (dev mode or dist not built)
+2026-03-26 23:15:31  INFO      [erp.api]  POST /api/chat | session=build-test | query='How many customers are in the database?'
+2026-03-26 23:15:31  INFO      [erp.agent.service]  [build-test] New session started
+2026-03-26 23:15:31  INFO      [erp.agent.service]  [build-test] Invoking agent | history_msgs=0 | query='How many customers are in the database?'
+2026-03-26 23:15:33  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query='MATCH (c:Customer) RETURN count(*) as customer_count'
+2026-03-26 23:15:33  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 93 ms | result_len=102
+2026-03-26 23:15:34  INFO      [erp.agent.service]  [build-test] Agent finished | 3242 ms | tool_steps=1 | response_len=59
+2026-03-26 23:15:34  INFO      [erp.api]  POST /api/chat OK | session=build-test | 3243 ms | response_len=59
+2026-03-26 23:15:44  INFO      [erp.api]  POST /api/chat | session=build-test | query='Who are the top 3 customers by total billed amount?'
+2026-03-26 23:15:44  INFO      [erp.agent.service]  [build-test] Invoking agent | history_msgs=2 | query='Who are the top 3 customers by total billed amount?'
+2026-03-26 23:15:46  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query | query="MATCH (c:Customer) RETURN c.name, CAST(c.total_billed_amount, 'DOUBLE') AS billed_amount ORDER BY billed_amount DESC LIMIT 3"
+2026-03-26 23:15:46  INFO      [erp.agent.tools]  [TOOL] execute_cypher_query done | 56 ms | result_len=267
+2026-03-26 23:15:47  INFO      [erp.agent.service]  [build-test] Agent finished | 3243 ms | tool_steps=1 | response_len=157
+2026-03-26 23:15:47  INFO      [erp.api]  POST /api/chat OK | session=build-test | 3244 ms | response_len=157
+2026-03-26 23:17:10  INFO      [erp.api]  DELETE /api/chat/build-test | session cleared
+2026-03-26 23:17:10  INFO      [erp.agent.service]  [build-test] Session cleared
+2026-03-26 23:17:10  INFO      [erp.api]  POST /api/chat | session=build-test-2 | query='What is a journal entry?'
+2026-03-26 23:17:10  INFO      [erp.agent.service]  [build-test-2] New session started
+2026-03-26 23:17:10  INFO      [erp.agent.service]  [build-test-2] Invoking agent | history_msgs=0 | query='What is a journal entry?'
+2026-03-26 23:17:13  INFO      [erp.agent.service]  [build-test-2] Agent finished | 3381 ms | tool_steps=0 | response_len=451
+2026-03-26 23:17:13  INFO      [erp.api]  POST /api/chat OK | session=build-test-2 | 3381 ms | response_len=451
