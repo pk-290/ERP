@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: erp-ai-agent
+    runtime: docker
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false # Set this in the Render dashboard for security
+      - key: SERVE_FRONTEND
+        value: "true"
+      - key: PORT
+        value: "8000"
+    plan: starter # Starter plan recommended for Kuzu/LLM memory
